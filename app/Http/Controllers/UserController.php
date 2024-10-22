@@ -21,7 +21,7 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * chama a view create.blade.php da pasta resources/view
      */
     public function create()
     {
@@ -29,7 +29,7 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Salva o usuário
      */
     public function store(Request $request)
     {
@@ -80,7 +80,7 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * chama a view edit.blade.php da pasta resources/view
      */
     public function edit(string $id)
     {
@@ -89,7 +89,7 @@ class UserController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update de usuário
      */
     public function update(Request $request, string $id)
     {
@@ -141,7 +141,7 @@ class UserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Função de excluir usuário
      */
     public function destroy(string $id)
     {
@@ -172,7 +172,7 @@ class UserController extends Controller
         if (!isset($request->phone)) {
             array_push($errors, 'O campo telefone é obrigatório');
         }
-        
+
         // Se estiver editando ignoramos as verificações abaixo
         if (!$update) {
             if (!isset($request->password)) {
