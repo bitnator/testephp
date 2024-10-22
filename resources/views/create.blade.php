@@ -12,7 +12,7 @@
                 </ul>
             </div>
         @endif
-        <form id="contactForm" action="{{ route('store') }}" method="POST">
+        <form id="contactForm" action="{{ route('saveUser') }}" method="POST">
             @csrf
             <div class="form-floating mb-3">
                 <input class="form-control" id="nome" name="name" type="text" placeholder="Nome" />

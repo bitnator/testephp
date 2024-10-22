@@ -7,3 +7,4 @@ Route::resource('/', App\Http\Controllers\UserController::class);
 Route::get('/edit_user/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('editScreen');
 Route::get('/delete/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('delete');
 Route::post('/update_user/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('updateUser');
+Route::post('/save', [App\Http\Controllers\UserController::class, 'store'])->name('saveUser');
